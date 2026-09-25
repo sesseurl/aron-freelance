@@ -1,43 +1,204 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aron R. Chaves | Freelance Developer</title>
-    <meta
-      name="description"
-      content="Desenvolvedor de software freelancer especializado em sistemas backend, APIs, automações, sites e plataformas sob medida. Entrega rápida e código de qualidade."
-    />
-    <meta name="author" content="Aron R. Chaves" />
-    <link rel="canonical" href="https://aronchaves.dev/aron-freelance/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Aron R. Chaves | Freelance Developer" />
-    <meta
-      property="og:description"
-      content="Soluções de TI para destravar o próximo passo do seu negócio. Websites, APIs, automações e sistemas sob medida."
-    />
-    <meta property="og:url" content="https://aronchaves.dev/aron-freelance/" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Aron R. Chaves | Freelance Developer"
-    />
-    <meta
-      name="twitter:description"
-      content="Desenvolvedor freelancer: websites, APIs, automações e sistemas sob medida."
-    />
-    <meta name="theme-color" content="#0a0a0a" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/svg+xml" href="/aron-freelance/favicon.svg" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aron R. Chaves - Desenvolvedor de software freelancer especializado em sistemas backend, APIs, automações, sites e plataformas sob medida." />
+  <title>Aron R. Chaves | Freelance Developer</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/favicon-512.png" />
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a" aria-hidden="true"></div>
+  <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Aron R. Chaves">
+        <img class="brand-icon" src="assets/logo/icone-verde-neon.png" alt="" width="28" height="28" />
+        <span class="brand-text">
+          <span class="brand-main">Aron Chaves</span>
+          <span class="brand-sub">Freelance Developer</span>
+        </span>
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="menu-btn" id="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-pattern" src="assets/pattern/fluxo-verde-azul.png" alt="" aria-hidden="true" />
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Tech Services • Freelance • Consulting</p>
+          <h1>Soluções de TI para destravar o próximo passo do seu negócio.</h1>
+          <p class="hero-copy">
+            Atendimento especializado para pequenos projetos e freelas de alto impacto: websites, bots,
+            automações, sistemas sob medida e integrações de pagamento.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://wa.me/5511986993010" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            <a class="btn btn-secondary" href="https://calendar.app.google/7jMRsV2HJP9zzm17A" target="_blank" rel="noopener noreferrer">Agendar call</a>
+          </div>
+          <ul class="quick-info">
+            <li><strong>Telefone:</strong> 11 986993010</li>
+            <li><strong>Email:</strong> contato@portellolabs.co</li>
+          </ul>
+        </div>
+        <aside class="hero-card reveal">
+          <h2>Como funciona</h2>
+          <ol>
+            <li>Briefing inicial e alinhamento de escopo.</li>
+            <li>Requisitos e cronograma organizados no Notion.</li>
+            <li>Entregas incrementais com calls de acompanhamento.</li>
+            <li>Aprovação final e handoff com suporte.</li>
+          </ol>
+          <p class="pill">Pagamento: 60% adiantado + 40% na entrega</p>
+          <p class="pill">Contrato digital: DocuSign ou Gov.br</p>
+          <p class="pill">Emissão de nota fiscal</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <p class="eyebrow">Nossos Serviços</p>
+        <h2>Pacotes práticos para resolver dor real</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/automacao.png" alt="" />
+            <h3>Bots de WhatsApp</h3>
+            <p>Atendimento automatizado 24/7, captura de leads e integração com CRM/planilhas.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/acesso.png" alt="" />
+            <h3>Sites Interativos</h3>
+            <p>Site responsivo, rápido e otimizado para SEO, com foco em conversão.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/inteligencia.png" alt="" />
+            <h3>Assistentes de IA</h3>
+            <p>Chatbots e agentes com GPT para atendimento, recomendações e automações.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/estrutura.png" alt="" />
+            <h3>Sistemas Customizados</h3>
+            <p>Backend, APIs e banco de dados sob medida para o core do seu negócio.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/integracao.png" alt="" />
+            <h3>Integração de Pagamentos</h3>
+            <p>PIX, cartão, boleto e notificações para fluxo de vendas automatizado.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/solucao.png" alt="" />
+            <h3>Plataformas Completas</h3>
+            <p>E-commerce e áreas de membros com painel de gestão e escalabilidade.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/dados.png" alt="" />
+            <h3>Automações Empresariais</h3>
+            <p>Scripts para eliminar tarefas repetitivas e gerar relatórios de forma confiável.</p>
+          </article>
+          <article class="card reveal">
+            <img class="card-icon" src="assets/icons/seguranca.png" alt="" />
+            <h3>Suporte Pós-Entrega</h3>
+            <p>30 dias de suporte, treinamento básico e refinamentos para mobile.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="processo">
+      <div class="container process-grid">
+        <div>
+          <p class="eyebrow">Processo de Trabalho</p>
+          <h2>Transparência do primeiro contato até a entrega</h2>
+          <p>
+            Cada projeto é conduzido com etapas claras, documentação contínua e checkpoints de validação.
+            O objetivo é reduzir risco, acelerar decisões e manter você no controle.
+          </p>
+        </div>
+        <div class="timeline reveal">
+          <p><strong>1. Diagnóstico:</strong> call inicial via Calendly ou Google Agenda.</p>
+          <p><strong>2. Planejamento:</strong> requisitos e backlog documentados no Notion.</p>
+          <p><strong>3. Execução:</strong> entregas progressivas com demonstrações recorrentes.</p>
+          <p><strong>4. Formalização:</strong> contrato padrão digital para segurança de ambas as partes.</p>
+          <p><strong>5. Pagamento PJ:</strong> cobrança via conta PJ Nubank.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-panel reveal">
+          <p class="eyebrow">Sobre Mim</p>
+          <h2>Aron R. Chaves</h2>
+          <p>
+            Desenvolvedor de software com mais de 10 anos de experiência em empresas nacionais e multinacionais,
+            com foco em sistemas distribuídos, APIs e soluções escaláveis. Atuo no mercado desde 2016, tendo passado por grandes
+            instituições financeiras como Banco do Brasil, Bradesco, IBM e Santander.
+          </p>
+          <p>
+            Minha trajetória começa com desenvolvimento web freelance e evolui para engenharia de software em ambientes enterprise.
+            Trabalho com Golang, Clojure, Elixir, TypeScript, Python, Java, React e Node.js.
+            A parte técnica é onde meu maior dom está, mas vejo o projeto como um todo: escopo, comunicação, prazos e entrega.
+          </p>
+          <p>
+            Além do desenvolvimento, ofereço mentoria e educação tech para equipes, empreendedores e profissionais em transformação digital.
+            Acredito que boas decisões técnicas nascem de um entendimento claro do problema de negócio.
+          </p>
+        </div>
+        <div class="about-panel reveal">
+          <h3>Diferenciais</h3>
+          <ul class="checklist">
+            <li>Preços tabelados e transparentes.</li>
+            <li>Arquitetura pensada para crescimento.</li>
+            <li>Comunicação objetiva e acompanhamento frequente.</li>
+            <li>Experiência prática com PMEs, startups e times tech.</li>
+            <li>Visão técnica e didática para acelerar adoção.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contato">
+      <div class="container contact-wrap reveal">
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos tirar sua ideia do papel?</h2>
+        <p>
+          Para freelas rápidos ou projetos de médio prazo, entre em contato e receba um direcionamento inicial sem custo.
+        </p>
+        <div class="contact-list">
+          <a href="https://wa.me/5511986993010" target="_blank" rel="noopener noreferrer">WhatsApp: 11 986993010</a>
+          <a href="mailto:contato@portellolabs.co">Email: contato@portellolabs.co</a>
+          <a href="https://calendar.app.google/7jMRsV2HJP9zzm17A" target="_blank" rel="noopener noreferrer">Agendar call online</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <img class="footer-logo" src="assets/logo/assinatura-verde-neon.png" alt="Aron R. Chaves - Freelance Developer" />
+      <div class="footer-links">
+        <p>Aron R. Chaves · Freelance Developer</p>
+        <p>Portello Labs · Consultoria em Tecnologia da Informação</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
