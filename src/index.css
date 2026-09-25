@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ffffff;
+  --color-secondary: #a1a1aa;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-surface: #0a0a0a;
+  --color-surface-elevated: #141414;
+  --color-border: #27272a;
+  --color-muted: #71717a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    margin: 0;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: white;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+}
+
+@layer components {
+  .container-section {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-section {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-subtitle {
+    color: var(--color-muted);
+    font-size: 1rem;
+    max-width: 36rem;
+  }
+
+  .card {
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: #3f3f46;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-accent);
+    color: white;
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-border);
+    color: var(--color-primary);
+    font-weight: 500;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: #3f3f46;
+  }
+}
