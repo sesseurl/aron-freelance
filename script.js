@@ -1,30 +1,8 @@
-const menuButton = document.getElementById("menu-btn");
-const nav = document.getElementById("main-nav");
-
-if (menuButton && nav) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
-    });
-  });
-}
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-
-document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('#navigation');
+function closeMenu(){ nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.setAttribute('aria-label','Abrir menu'); menu.querySelector('span').textContent='＋'; }
+menu.addEventListener('click',()=>{ const expanded=menu.getAttribute('aria-expanded')!=='true'; nav.classList.toggle('open',expanded); menu.setAttribute('aria-expanded',String(expanded)); menu.setAttribute('aria-label',expanded?'Fechar menu':'Abrir menu'); menu.querySelector('span').textContent=expanded?'−':'＋'; });
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+document.addEventListener('keydown',event=>{if(event.key==='Escape' && menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
+document.addEventListener('click',event=>{if(!event.target.closest('header')) closeMenu();});
+window.matchMedia('(min-width: 801px)').addEventListener('change',event=>{if(event.matches) closeMenu();});
